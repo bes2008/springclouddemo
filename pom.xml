@@ -9,14 +9,15 @@
     <version>1.0.0</version>
     <name>parent</name>
     <packaging>pom</packaging>
+
+    <modules>
+        <module>server</module>
+    </modules>
+
     <properties>
         <slf4j.version>1.7.26</slf4j.version>
         <easyjson.version>2.1.0</easyjson.version>
         <langx-java.version>2.0.1</langx-java.version>
-
-        <maven.compiler.source>1.6</maven.compiler.source>
-        <maven.compiler.target>1.6</maven.compiler.target>
-        <maven.compiler.compilerVersion>1.6</maven.compiler.compilerVersion>
 
         <project.major.version>1.0.0</project.major.version>
         <project.internal.version>1.0.0</project.internal.version>
