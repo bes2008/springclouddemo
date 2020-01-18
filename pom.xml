@@ -20,6 +20,9 @@
 
         <project.major.version>1.0.0</project.major.version>
         <project.internal.version>1.0.0</project.internal.version>
+
+        <scm.url0>https://github.com/fangjinuo/springclouddemo</scm.url0>
+        <scm.url>${scm.url0}.git</scm.url>
     </properties>
 
     <dependencyManagement>
@@ -129,7 +132,7 @@
                             <doCheck>false</doCheck>
                             <doUpdate>true</doUpdate>
                             <getRevisionOnlyOnce>true</getRevisionOnlyOnce>
-                            <scmConnectionUrl>scm:git:https://github.com/fangjinuo/springclouddemo.git</scmConnectionUrl>
+                            <scmConnectionUrl>scm:git:${scm.url}</scmConnectionUrl>
                             <useLastCommittedRevision>true</useLastCommittedRevision>
                         </configuration>
                     </execution>
