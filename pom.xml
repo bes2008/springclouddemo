@@ -6,7 +6,7 @@
 
     <groupId>com.github.fangjinuo.springclouddemo</groupId>
     <artifactId>parent</artifactId>
-    <version>3.0.0</version>
+    <version>1.0.0</version>
     <name>parent</name>
     <packaging>pom</packaging>
     <properties>
@@ -18,8 +18,8 @@
         <maven.compiler.target>1.6</maven.compiler.target>
         <maven.compiler.compilerVersion>1.6</maven.compiler.compilerVersion>
 
-        <project.major.version>3.0.0</project.major.version>
-        <project.internal.version>3.0.0</project.internal.version>
+        <project.major.version>1.0.0</project.major.version>
+        <project.internal.version>1.0.0</project.internal.version>
     </properties>
 
     <scm>
