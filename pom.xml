@@ -22,13 +22,6 @@
         <project.internal.version>1.0.0</project.internal.version>
     </properties>
 
-    <scm>
-        <tag>${project.version}</tag>
-        <url>https://github.com/fangjinuo/springclouddemo.git</url>
-        <connection>https://github.com/fangjinuo/springclouddemo.git</connection>
-        <developerConnection>https://github.com/fangjinuo/springclouddemo.git</developerConnection>
-    </scm>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -136,13 +129,12 @@
                             <doCheck>false</doCheck>
                             <doUpdate>true</doUpdate>
                             <getRevisionOnlyOnce>true</getRevisionOnlyOnce>
-                            <scmConnectionUrl>scm:git:https://github.com/fangjinuo/sqlhelper.git</scmConnectionUrl>
+                            <scmConnectionUrl>scm:git:https://github.com/fangjinuo/springclouddemo.git</scmConnectionUrl>
                             <useLastCommittedRevision>true</useLastCommittedRevision>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
