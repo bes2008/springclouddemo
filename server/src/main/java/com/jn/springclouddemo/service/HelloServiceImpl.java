@@ -1,0 +1,30 @@
+package com.jn.springclouddemo.service;
+
+import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.serviceregistry.ServiceRegistry;
+import org.springframework.cloud.zookeeper.serviceregistry.ServiceInstanceRegistration;
+import org.springframework.cloud.zookeeper.serviceregistry.ZookeeperServiceRegistry;
+import org.springframework.stereotype.Service;
+
+@Service
+public class HelloServiceImpl implements HelloService, InitializingBean {
+
+    private ServiceRegistry registry;
+
+    @Autowired
+    public void setRegistry(ZookeeperServiceRegistry registry) {
+        this.registry = registry;
+    }
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        ServiceInstanceRegistration registration = ServiceInstanceRegistration.builder().defaultUriSpec().address("localhost").port(8080).name("hello").build();
+        this.registry.register(registration);
+    }
+
+    @Override
+    public String sayHello(String message) {
+        return null;
+    }
+}
