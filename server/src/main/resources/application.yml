@@ -1,8 +1,16 @@
 spring:
   cloud:
-    zookeeper:
-      connect-string: localhost:2181
     service-registry:
-      enabled: true
+      enabled: true # 指定是否创建 ServiceRegistry 实例，默认值为 true
+      auto-registration:
+        enabled: true # 用于自动将spring.application.name, server.port 等应用本身注册为一个 服务，默认值为 true，如果你想自己通过编程方式注册，则可以将其设置为false
+    zookeeper:
+      connect-string: localhost:2181  # 在zk 的connect-string 的端口后面加路径，是没有作用的，可以通过修改root属性来进行服务隔离
+      discovery:
+        root: /services # 用于指定将服务注册在zookeeper上的哪个节点之下，默认值为 /services
+        instanceId: serviceB_ID # 应用实例ID，默认是 随机的UUID。所以每一次注册上去的都是不一样的UUID值。
+        instanceHost: localhost # 应用实例主机
+  application:
+    name: serviceB
 server:
-  port: 8080
+  port: 8081
